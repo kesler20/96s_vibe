@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="hideport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0rem;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 60vh;
+        align-items: flex-start;
+        padding-top: 100px;
+    }
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+      li img {
+        width: 150px;
+      }
+      body {
+        height: 95vh;
+        position: relative;
+        background-image: url("bg.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .start-bar {
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(200, 200, 200);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid white;
+      }
+      .start-button {
+        cursor: pointer;
+        display: flex;
+        border: 1px solid gray;
+        padding: 2px;
+        border-radius: 3px;
+        box-shadow: 2px 2px black;
+      }
+      .start-button:hover {
+        box-shadow: none;
+        margin-bottom: 1px;
+      }
+      .start-button img {
+        width: 20px;
+      }
+      .start-btn {
+        font-weight: 700;
+      }
+
+      .alert-dialog {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100px;
+        width: 250px;
+        background-color: rgb(200, 200, 200);
+        border-top: 3px solid rgb(200, 200, 200);
+        border-left: 3px solid rgb(200, 200, 200);
+        box-shadow: 2px 2px 2px white;
+      }
+      .header {
+        background-color: blue;
+        color: white;
+        width: 100%;
+        height: 30px;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .header p {
+        margin: 10px;
+      }
+      .cross-btn {
+        background-color: rgb(200, 200, 200);
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+        box-shadow: 1px 2px black;
+        height: 18px;
+        width: 20px;
+        margin: 10px;
+        color: gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .cross-btn:hover {
+        box-shadow: none;
+        margin-bottom: 1px;
+      }
+
+      .alert-message {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px;
+      }
+      .alert-message img {
+        width: 45px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="links">
+      <ul>
+        <li>
+          <img src="./explorer-ico.png" alt="" srcset="" />
+          <p>Home</p>
+        </li>
+        <li>
+          <img src="./explorer-ico.png" alt="" srcset="" />
+          <p>Team</p>
+        </li>
+        <li>
+          <img src="./explorer-ico.png" alt="" srcset="" />
+          <p>Project</p>
+        </li>
+        <li>
+          <img src="./explorer-ico.png" alt="" srcset="" />
+          <p>Parts</p>
+        </li>
+        <li>
+          <img src="./explorer-ico.png" alt="" srcset="" />
+          <p>Safety?</p>
+        </li>
+        <li>
+          <img src="./explorer-ico.png" alt="" srcset="" />
+          <p>Wet lab</p>
+        </li>
+        <li>
+          <img src="./explorer-ico.png" alt="" srcset="" />
+          <p>Dry lab</p>
+        </li>
+        <li>
+          <img src="./explorer-ico.png" alt="" srcset="" />
+          <p>Human practices</p>
+        </li>
+        <li>
+          <img src="./explorer-ico.png" alt="" srcset="" />
+          <p>Awards</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="alert-dialog hide">
+      <div class="header">
+        <p>Error Starting Program!</p>
+        <div class="cross-btn">X</div>
+      </div>
+      <div class="alert-message">
+        <img src="./alert-image.png" />
+        <p>The ROFLcopter is in bound.</p>
+      </div>
+    </div>
+
+    <div class="start-bar">
+      <div class="start-button">
+        <img src="./windows-cion.png" alt="" srcset="" />
+        <div class="start-btn">Start</div>
+      </div>
+    </div>
+
+    <script>
+      const startButton = document.querySelector(".start-button");
+      const alertDialog = document.querySelector(".alert-dialog");
+      const crossBtn = document.querySelector(".cross-btn");
+      startButton.addEventListener("click", () => {
+        alert("00ODLF_ is trying to connect ..")
+        setTimeout(() => {
+          alertDialog.classList.toggle("hide", false);
+        }, 1000);
+      });
+
+      crossBtn.addEventListener("click", () => {
+        alertDialog.classList.toggle("hide", true);
+      });
+    </script>
+  </body>
+</html>
